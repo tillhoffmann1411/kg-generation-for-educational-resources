@@ -1,0 +1,10 @@
+__pycache__
+
+# Virtual environment folder
+venv
+
+# Configuration and Secrets
+.env
+
+# MacOS file
+.DS_Store
