@@ -36,12 +36,12 @@ cd <your_repository_name>
 
 3. It is recommended to use a virtual environment (optional). You can set it up using the following command:
 ```bash
-python3 -m venv env
+python3 -m venv venv
 ```
 
 4. Activate the virtual environment (optional):
 ```bash
-source env/bin/activate  # On Windows use `env\Scripts\activate`
+source venv/bin/activate  # On Windows use `env\Scripts\activate`
 ```
 
 5. Install the required dependencies:

@@ -1,5 +1,8 @@
 __pycache__
 
+# produced topics.ttl
+topics.ttl
+
 # Virtual environment folder
 venv
 

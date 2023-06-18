@@ -30,13 +30,13 @@ BASE_URL = 'https://oer.gitlab.io/OS/'
 ## This is the lecture identifier that we will use to filter links
 LECTURE_IDENTIFIER = 'Operating-Systems'
 ## Safe intermediate steps as csv
-SECURITY_SAVES = True
+SECURITY_SAVES = False
 ## Save the final data as an CSV before generating the knowledge graph
-SAFE_AS_CSV = True
+SAFE_AS_CSV = False
 ## If the data should be persisted in a Neo4j database (True/Flase)
-LOAD_IN_DB = False
+LOAD_IN_DB = True
 ## If the data should be persisted in a .ttl file (True/Flase)
-LOAD_AS_TURTLE = False
+LOAD_AS_TURTLE = True
 
 # Neo4j Config
 NEO4J_URI = os.getenv('NEO4J_URI')
@@ -85,7 +85,7 @@ def main():
         columns_with_list = ['beyondlinks', 'forwardlinks', 'backwardlinks', 'lecturelinks',
                              'basiclinks', 'wiki_ids', 'wiki_labels', 'wiki_descriptions',
                              'dbpedia_ids', 'dbpedia_labels', 'dbpedia_descriptions', 'wikipedia_ids', 'wikipedia_labels', 'wikipedia_descriptions']
-        with open(ENHANCED_TOPIC_SRC, 'r') as csvfile:
+        with open(ENHANCED_TOPIC_SRC, 'r', encoding='utf-8-sig') as csvfile:
             reader = csv.DictReader(csvfile, delimiter=';')
             for row in reader:
                 for column in columns_with_list:
